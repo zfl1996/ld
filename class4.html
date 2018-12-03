@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+            float: left;
+            /*浮动的高度塌陷问题*/
+        }
+        .cleaerfix::after{
+            content: "";
+            display: block;
+            clear: both;
+            /*清除浮动效果*/
+        }
+    </style>
+
+</head>
+<body>
+    <ul class="cleaerfix">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    
+    </ul>
+</body>
+</html>
